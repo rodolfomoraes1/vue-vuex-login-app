@@ -39,3 +39,6 @@ typings
 
 #idea metadata
 .idea
+
+#package lock
+package-lock.json

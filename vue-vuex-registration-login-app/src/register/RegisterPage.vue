@@ -5,6 +5,11 @@
             <div class="card-body">
                 <form class="form" @submit.prevent="handleSubmit">
                     <div class="form-group">
+                        <label>Name</label>
+                        <input type="name" v-model="user.name" v-validate="'required'" name="name" class="form-control" :class="{ 'is-invalid': submitted && errors.has('name') }" />
+                        <div v-if="submitted && errors.has('name')" class="invalid-feedback">{{ errors.first('name') }}</div>
+                    </div>
+                    <div class="form-group">
                         <label>Email</label>
                         <input type="email" v-model="user.email" v-validate="'required'" name="email" class="form-control" :class="{ 'is-invalid': submitted && errors.has('email') }" />
                         <div v-if="submitted && errors.has('email')" class="invalid-feedback">{{ errors.first('email') }}</div>
@@ -12,7 +17,7 @@
 
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" v-model="user.password" v-validate="{ required: true, min: 3 }" name="password" class="form-control" :class="{ 'is-invalid': submitted && errors.has('password') }" />
+                        <input type="password" v-model="user.password" v-validate="{ required: true, min: 8 }" name="password" class="form-control" :class="{ 'is-invalid': submitted && errors.has('password') }" />
                         <div v-if="submitted && errors.has('password')" class="invalid-feedback">{{ errors.first('password') }}</div>
                     </div>
 
@@ -34,6 +39,7 @@ export default {
     data () {
         return {
             user: {
+                name: '',
                 email: '',
                 password: ''
             },

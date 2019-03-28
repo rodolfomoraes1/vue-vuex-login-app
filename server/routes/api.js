@@ -76,7 +76,7 @@ router.post('/login', (req, res) => {
                 } else {
                     let payload = { subject: user._id };
                     let token = jwt.sign(payload, TOKEN_KEY, {expiresIn: '7d'});
-                    res.status(200).send({token, 'email': user.email});
+                    res.status(200).send({token, 'name': user.name});
                 }
             }
         }

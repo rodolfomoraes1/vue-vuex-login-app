@@ -1,13 +1,15 @@
 <template>
     <div class="col-8 mx-auto mt-5">
-        <h1>User: {{account.user.email}}</h1>
-        <h2 class="mt-1">Users List:</h2>
+        <h1>Users List</h1>
+
+        <h5 class="mt-2">Logged user: {{account.user.name}}</h5>
+
         <em v-if="users.loading">Loading users...</em>
         <span v-if="users.error" class="text-danger">ERROR: {{users.error}}</span>
 
         <ul class="list-group" v-if="users.items">
             <li class="list-group-item disabled" v-for="user in users.items" :key="user.id">
-                {{user.email}}
+                {{user.name}} - {{user.email}}
             </li>
         </ul>
 
