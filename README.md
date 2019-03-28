@@ -1,5 +1,4 @@
 # vue-vuex-registration-login-app
-##Ophigo project
 
 ## Build Setup and run
 
