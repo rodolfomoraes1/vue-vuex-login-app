@@ -1,30 +1,17 @@
-# Simple app using token based auth
-Project under development using:
-- Node
-- Express
-- Body-parser
-- Cors
-- Mongo
-- Mongoose
-- Json Web Token (JWT)
-- Vue
-- Vuex
-- Bootstrap 4
+# vue-vuex-registration-login-app
+##Ophigo project
 
-## Table of Contents
+## Build Setup and run
 
-- [Instructions](#instructions)
-- [Features Developed](#features-developed)
-- [Authors](#authors)
+``` bash
+# install dependencies on both server's and vue's app folder using
+npm install
 
-## Instructions
-The project is under development. This file will be updated asap.
+# Open the terminal on the server folder and type
+node server
 
-### Run
+# Open the terminal on the vue's app folder and type
+npm start
 
-
-## Features Developed
-
-
-## Authors
-This project was developed by Rodolfo Moraes Martins.
+# Go to your browser and access http://localhost:8080
+```

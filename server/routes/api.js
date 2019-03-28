@@ -4,7 +4,6 @@ const router = express.Router();
 const User = require('../models/user');
 
 const mongoose = require('mongoose');
-// const db = 'mongodb+srv://root:root@cluster0-0m5fr.mongodb.net/eventsdb?retryWrites=true';
 const db = 'mongodb+srv://root:root@cluster0-0m5fr.mongodb.net/ophigousersdb?retryWrites=true';
 
 const TOKEN_KEY = 'secretKey';
